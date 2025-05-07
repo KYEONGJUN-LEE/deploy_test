@@ -32,7 +32,9 @@ jobs:
               python3 -m venv venv
             fi
 
-            git pull origin main
+            git fetch --all
+            git reset --hard origin/main
+
             source venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
